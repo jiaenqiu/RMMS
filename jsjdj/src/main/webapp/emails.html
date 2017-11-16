@@ -1,0 +1,102 @@
+<html>
+	<body>
+		<table class="table table-hover">
+			<tr class="info">
+				<td colspan="5" style="text-align: center">通知人员email列表</td>
+				<td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#addEmailModal"><i class="glyphicon glyphicon-plus"></i></button></td></td>
+			</tr>
+			<tr class="success">
+				<td>#</td><td>区域</td><td>姓名</td><td>手机号</td><td>邮箱</td><td>操作</td>
+			</tr>
+			<tr class="info">
+				<td>1</td>
+				<td>市级</td>
+				<td>贾恩秋</td>
+				<td>183-3253-7474</td>
+				<td>jiaenqiu@163.com</td>
+				<td>
+					<button type="button" id="emailJob" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#emailModal">
+						<i class="glyphicon glyphicon-envelope"></i>通知</button>
+					<!-- <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#detailsModal">
+						<i class="glyphicon glyphicon-eye-open"></i></button> -->
+					<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateEmailModal">
+						<i class="glyphicon glyphicon-pencil"></i></button>
+					<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#deleteEmailModal">
+						<i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</table>
+		<div id="myAlert" class="alert alert-success" style="display:none;">
+			<a href="#" class="closeT" data-dismiss="alert">&times;</a>
+			邮件发送<strong>成功！</strong>
+		</div>
+	</body>
+	<script>
+		$(function(){
+		    $("#emailJob").bind("click",function() { 
+			    	window.setTimeout(function() { 	
+		    			$("#myAlert").css('display','block');
+		    		},1000); 
+		    		window.setTimeout(function() { 	
+		    			$("#myAlert").css('display','none');
+		    		},3000); 
+			});
+		});
+	</script>
+</html>
+
+<!-- 添加Modal -->
+<div class="modal" id="addEmailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        		<span aria-hidden="true">&times;</span>
+        </button> -->
+        <h4 class="modal-title" id="myModalLabel" style="text-align:center;">添加Email</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-3" style="text-align:right;margin-top:5px;">姓名</div><!-- col-md-offset-1 -->
+          <div class="col-md-8">
+          		<input type="text" id="username" class="form-control" placeholder="username">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3" style="text-align:right;margin-top:5px;">手机号</div> 
+          <div class="col-md-8">
+          		<input type="text" id="phone" class="form-control" placeholder="phone">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3" style="text-align:right;margin-top:5px;">邮件</div> 
+          <div class="col-md-8">
+          		<input type="text" id="idcard" class="form-control" placeholder="idcard">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- 通知Modal -->
+<div class="modal bs-example-modal-sm" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        		<span aria-hidden="true">&times;</span>
+        </button> -->
+        <h4 class="modal-title" id="myModalLabel" style="text-align:center;">删除数据</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">确认删除</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

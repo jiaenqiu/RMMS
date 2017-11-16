@@ -1,0 +1,6 @@
+com/example/demo/mail/controller/MailController.class
+com/example/demo/mail/service/MailService.class
+com/example/demo/mail/util/MailConfig.class
+com/example/demo/mail/manager/MailManager.class
+com/example/demo/mail/manager/MailManager$1.class
+com/example/demo/mail/util/MailUtil.class
